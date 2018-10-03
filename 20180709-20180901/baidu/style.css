@@ -1,0 +1,233 @@
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+p,
+blockquote,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+pre,
+form,
+fieldset,
+legend,
+button,
+input,
+textarea,
+th,
+td {
+  margin: 0;
+  padding: 0;
+}
+
+body,
+button,
+input,
+select,
+textarea {
+  font: 12px/1.5 tahoma, arial, \5b8b\4f53, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+}
+
+address,
+cite,
+dfn,
+em,
+var {
+  font-style: normal;
+}
+
+code,
+kbd,
+pre,
+samp {
+  font-family: courier new, courier, monospace;
+}
+
+small {
+  font-size: 12px;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+sup {
+  vertical-align: text-top;
+}
+
+sub {
+  vertical-align: text-bottom;
+}
+
+legend {
+  color: #000;
+}
+
+fieldset,
+img {
+  border: 0;
+}
+
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* header */
+.header {
+  display: flex;
+  flex-direction: row-reverse;
+}
+.nav {
+  width: 465px;
+  height: 42px;
+}
+.nav ul {
+  display: flex;
+}
+.nav ul li {
+  color: #333;
+  margin: 22px 19px 0 0;
+  line-height: 24px;
+}
+.nav li a {
+  color: #333;
+  text-decoration: underline;
+}
+.nav ul span {
+  font-weight: bold;
+}
+.more {
+  width: 60px;
+  height: 25px;
+  background-color: #3388ff;
+}
+.nav .more a {
+  color: #fff;
+  font-size: 13px;
+  font-weight: bold;
+  text-decoration: none;
+}
+.nav li a:hover {
+  color: #00c;
+}
+.container {
+  width: 641px;
+  height: 201px;
+  margin: 130px auto 435px auto;
+  /* border: 1px solid#00c; */
+}
+.logo {
+  width: 641px;
+  height: 129px;
+  display: flex;
+  justify-content: center;
+}
+
+.sousuo form {
+  width: 580px;
+  height: 30px;
+  display: flex;
+  margin-top: 30px;
+}
+
+.img {
+  width: 500px;
+  height: 28px;
+  background: url(image/camera.png) no-repeat;
+  background-position: right;
+  border: 1px solid#999;
+  display: flex;
+}
+.sousuo button {
+  width: 80px;
+  height: 30px;
+  font-size: 14px;
+  background-color: #3388ff;
+  border: none;
+}
+.sousuo button a {
+  color: #fff;
+  font-weight: bold;
+}
+.footer {
+  height: 70px;
+  width: 645px;
+  margin: 0 auto 55px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.qrcode {
+  width: 280px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.qrcode p {
+  color: #666666;
+  font-weight: bold;
+}
+.qrcode span {
+  color: #999999;
+}
+.qrcode_l {
+  width: 125px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.qrcode_r {
+  width: 125px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.ftconw {
+  width: 325px;
+}
+.ftconw p {
+  color: #999;
+  line-height: 24px;
+}
+.ftconw p a {
+  color: #999;
+  text-decoration: underline;
+}
+.ftconw-01 {
+  width: 330px;
+  height: 20px;
+  display: flex;
+  justify-content: space-between;
+}
