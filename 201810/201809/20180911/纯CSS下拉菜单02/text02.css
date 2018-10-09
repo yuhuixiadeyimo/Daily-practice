@@ -1,0 +1,47 @@
+.nav ul {
+  list-style-type: none;
+  background-color: #333;
+}
+.nav ul:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.nav ul > li {
+  float: left;
+  position: relative;
+}
+.nav a {
+  text-decoration: none;
+  color: #fff;
+  padding: 10px 20px;
+  display: block;
+  border-right: 1px solid #595959;
+  line-height: 1.2;
+}
+.nav a:hover {
+  background-color: #595959;
+}
+.nav li ul {
+  background-color: #273754;
+}
+.nav li ul li {
+  width: 150px;
+}
+.nav li ul a:hover {
+  background-color: rgb(0, 0, 0, 0.1);
+  /* position: absolute;
+  left: 0; */
+}
+.nav5 ul li:hover ul li {
+  height: 36px;
+}
+.nav5 li ul {
+  position: absolute;
+  left: 0;
+  top: 36px;
+}
+.nav5 li ul li {
+  overflow: hidden;
+  height: 0;
+}
