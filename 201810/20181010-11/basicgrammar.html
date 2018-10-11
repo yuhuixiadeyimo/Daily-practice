@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JavaScript——基本语法</title>
+    <style>
+        body {
+            background: url(body-bj.png);
+            color: aliceblue;
+            font-family: 方正书体;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="text-align:center;">JavaScript——基本语法</h1>
+    <p style="text-align:center;">JavaScript的宿主环境有多种，最常见的就是浏览器，另外还有服务器，也就是Node项目</p>
+    <ol type="I">
+        <li>
+            <h2>语句和变量</h2>
+            <p>变量赋值的时候 忘了写var命令， 语句也是有效的 ，但是不写var命令容易出错，赋值的时候第二次重复赋值会覆盖第一次的赋值</p>
+        </li>
+        <li>
+            <h2>标识符</h2>
+            <p>大小写敏感。首字符：字母-$-下划线。中文也可以作标识符</p>
+        </li>
+        <li>
+            <h2>注释</h2>
+            <p>单行用// 多行用/* */</p>
+            <p>JS兼容HTML代码的注释</p>
+        </li>
+        <li>
+            <h2>区块</h2>
+            <p>区块是指JS中的大括号{}，但区块对var命令并不生效</p>
+        </li>
+        </li>
+        <li>
+            <h2>条件语句</h2>
+            <ol>
+                <li>
+                    <h2>if语句</h2>
+                    <p>布尔值：true ,false。</p>
+                    <p> if(布尔值)语句；</p>
+                    <p>如果布尔值为true，则执行紧跟的语句，如果为false，则跳过语句；</p>
+                    <p>if(布尔值){语句；}不过一般if语句后最好加个代码区块{}，方便插入语句</p>
+                    <p>if的表达式中优先采用严格相等运算符===，而不用相等运算符==</p>
+                </li>
+                <li>
+                    <h2>if...else语句</h2>
+                    <p>if(){
+                        满足条件时执行的语句} else{不满足条件是执行的语句}</p>
+                    <p>if (){} else if(){} else if(){} else{} </p>
+                    <p>else只执行离他最近的那个if</p>
+                </li>
+                <li>
+                    <h2>switch语句</h2>
+                    <p>当使用多个if...else语句时用switch语句更方便</p>
+                    <p>switch (fruit) {
+                        case "banana":
+                        // ...
+                        break;
+                        case "apple":
+                        // ...
+                        break;
+                        default:
+                        // ...
+                        }
+                        // x 没有发生类型转换
+                    </p>
+                    <p>上面代码根据变量fruit的值，选择执行相应的case。如果所有case都不符合，则执行最后的default部分。需要注意的是，每个case代码块内部的break语句不能少，否则会接下去执行下一个case代码块，而不是跳出switch结构。</p>
+                </li>
+                <li>三元运算符</li>
+                <p>(条件)？表达式1：表达式2</p>
+                <p>如果条件为true，则执行表达式1的值，否则执行表达式2的值</p>
+                <p>var myVar;
+                    console.log(
+                    myVar ?
+                    'myVar has a value' :
+                    'myVar do not has a value'
+                    )
+                    // myVar do not has a value
+                </p>
+            </ol>
+        </li>
+        <li>
+            <h2>循环语句</h2>
+            <ol>
+                <li>
+                    <h3>while 循环</h3>
+                    <p>while语句是由一个循环条件和一个代码区块组成，只要条件为真，则不断循环执行代码块</p>
+                    <p> while(条件)
+                        语句；
+                        或
+                        while(条件){语句；}
+                    </p>
+                    <p>条件是一个表达式，必须放在圆括号内，代码块中如果只有一个语句，可以不加大括号，否则必须加上大括号</p>
+                    <p>只要条件为真（true）则一直循环下去</p>
+
+                </li>
+                <li>
+                    <h3>for循环</h3>
+                    <p>for(初始化表达式；条件；递增表达式)
+                        语句
+                        <p>for (初始化表达式; 条件表达式; 递增表达式) {
+                            语句
+                            }</p>
+                        <p>//括号内有三个表达式，三个语句。</p>
+                    </p>
+                    <p>初始化表达式：确定循环变量的初始值，在循环开始时只执行一次</p>
+                    <p>条件表达式：每轮循环开始时，都要执行这个表达式，只有条件为真，才能继续循环</p>
+                    <p>递增表达式：每轮循环的最后一次操作，通常用来来递增循环变量</p>
+                    <p>所有的for循环都可以改成while循环</p>
+                </li>
+                <li>
+                    <h3>do...while循环</h3>
+                    <p>do 语句 &nbsp while（条件）</p>
+                    <p>var x = 3;
+                        var i = 0;
+
+                        do {
+                        console.log(i);
+                        i++;
+                        } while(i < x);</p> <p>先执行一次循环体，再判断循环条件</p>
+                </li>
+                <li>
+                    <h3>break和continue</h3>
+                    <p>break可以跳出代码块，结束循环</p>
+                    <p>continue是跳出本次循环，然后回到头部，继续下一次循环</p>
+                <li>
+                    <h3>标签(label)</h3>
+                    <p>label: 语句</p>
+                    <p>标签相当于定位符，用于跳转到程序的任意位置</p>
+                    <p>标签可以是任意的标识符，，但不能是保留字，语句部分可以使任意语句</p>
+                    <p>标签通常与break,continue语句配合使用，用于跳出特定循环</p>
+                    <p>top:
+                        for (var i = 0; i < 3; i++){ for (var j=0; j < 3; j++){ if (i===1 && j===1) break top;
+                            console.log('i=' + i + ' , j=' + j);
+                          }
+                        }
+                      // i=0, j=0
+                      // i=0, j=1
+                      // i=0, j=2
+                      // i=1, j=0
+                    </p>
+                </li>
+            </ol>
+        </li>
+    </ol>
+
+
+</body>
+
+</html>
