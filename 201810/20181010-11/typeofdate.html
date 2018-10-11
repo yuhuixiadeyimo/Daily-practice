@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>JavaScript——数据类型</title>
     <style>
-        body{
+        body {
             background: url(body-bj.png);
             color: aliceblue;
         }
@@ -15,17 +15,87 @@
 </head>
 
 <body>
-    <h1 style="text-align:center;">JS笔记——数据类型</h1>
-    <ol type="I">
-        <li>
-            <h3></h3>
+    <h1 style="text-align:center;">JavaScript——数据类型</h1>
+    <ol>
+        <h2>概述</h2>
+        <h4>javaScript共有六种数据类型（ES6又新增了第七种Symbol类型的值，这里不涉及）</h4>
+        <li>数值（number）：整数和小数</li>
+        <li>字符串（string）：文本（比如Hello World）</li>
+        <li>布尔值（boolean）:表示真和假（true和false）</li>
+        <li>undefined:表示未定义或不存在</li>
+        <li>null:表示空值，即此处的值为空</li>
+        <li>对象（object）：各种值组成的集合
+            <p>数值，字符串，布尔值这三种是原始数据类型的值</p>
+            <p>对象（object）是合成类型的值，一个对象往往是由多种原始数据类型组成
+                <ol>——又细分为：
+                    <li> 狭义的对象（object）;</li>
+                    <li>数组（array）；</li>
+                    <li>函数（function）</li>
+                </ol>
+            </p>
+            <p>undefined和null是两个特殊的值</p>
         </li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
     </ol>
+
+    <ol>
+        <li>
+            <h2>确定一个值是什么类型</h2>
+            <ol>
+                <li>typeof运算符</li>
+                <li>instanceof</li>
+                <li>object.prototype.tostring</li>
+            </ol>
+            <h3>instanceof运算符和Object.prototype.toString方法，将在后文介绍。这里介绍typeof运算符。</h3>
+            <p>typeof 123 // "number"</p>
+            <p> typeof '123' // "string"</p>
+            <p> typeof false // "boolean"</p>
+            <p>typeof undefined
+                // "undefined"</p>
+            <p>function f() {}
+                typeof f
+                // "function"</p>
+            <p>typeof window // "object"</p>
+            <p> typeof {} // "object"</p>
+            <p> typeof [] // "object"</p>
+            <p>typeof null // "object"</p>
+        </li>
+        <li>
+            <h2>null和undefined</h3>
+                <p>在if语句中null和undefined都表示为false</p>
+                <p> if (!undefined) {
+                    console.log('undefined is false');
+                    }
+                    // undefined is false
+
+                    if (!null) {
+                    console.log('null is false');
+                    }
+                    // null is false
+
+                    undefined == null
+                    // true
+                </p>
+        </li>
+        <li>
+            <h2>布尔值（boolean）</h2>
+            <p>true表示真，false表示假，下列运算符会返回布尔值</p>
+            <ol>
+                <li>
+                    两元逻辑运算符: && (And)，|| (Or)
+                </li>
+                <li>前置逻辑运算符： ! (Not)</li>
+                <li>相等运算符：===，!==，==，!=</li>
+                <li>比较运算符：>,>=,<,<=</li> </ol> <h4> 除了以下六个值被转为false，其他值都是为true</h4>
+                        <ul>
+                            <li> undefined</li>
+                            <li> null</li>
+                            <li>false</li>
+                            <li> 0</li>
+                            <li> NaN</li>
+                            <li> ""或''（空字符串）</li>
+                        </ul>
+                </li>
+            </ol>
 </body>
 
 </html>
