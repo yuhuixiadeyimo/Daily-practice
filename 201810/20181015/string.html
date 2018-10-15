@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JavaScript——字符串string</title>
+    <link rel="shortcut icon" href="myico.ico" type="image/x-icon">
+    <style>
+        body {
+            background: url(body-bj.png);
+            color: aliceblue;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="text-align:center;">JavaScript——字符串string</h1>
+    <ol>
+        <li>
+            <h3>定义</h3>
+            <p>字符串就是零个或多个排在一起的字符，放在单引号或双引号之中。</p>
+            <p>由于 HTML 语言的属性值使用双引号，所以很多项目约定 JavaScript 语言的字符串只使用单引号</p>
+            <p>单引号字符串的内部，可以使用双引号。双引号字符串的内部，可以使用单引号。</p>
+            <p>如果要在单引号字符串的内部，使用单引号，就必须在<b style="color:green">内部的单引号前面</b>加上反斜杠，用来转义。双引号字符串内部使用双引号，也是如此。</p>
+            <p>'Did she say \'Hello\'?'
+                // "Did she say 'Hello'?"
+
+                "Did she say \"Hello\"?"
+                // "Did she say "Hello"?"</p>
+            <p>如果长字符串必须分成多行，可以在每一行的尾部使用反斜杠。</p>
+            <p>var longString = 'Long \
+                long \
+                long \
+                string';
+
+                longString
+                // "Long long long string"</p>
+            <p>注意，反斜杠的后面必须是换行符，而不能有其他字符（比如空格），否则会报错。</p>
+        </li>
+        <li>
+            <h3>转义符</h3>
+            <p>\0 ：null（\u0000）</p>
+            <p>\b ：后退键（\u0008）</p>
+            <p> \f ：换页符（\u000C）</p>
+            <p> \n ：换行符（\u000A）</p>
+            <p>\r ：回车键（\u000D）</p>
+            <p> \t ：制表符（\u0009）</p>
+            <p>\v ：垂直制表符（\u000B）</p>
+            <p> \' ：单引号（\u0027）</p>
+            <p> \" ：双引号（\u0022）</p>
+            <p> \\ ：反斜杠（\u005C）</p>
+        </li>
+        <li>
+            <h3>字符串与数组 </h3>
+            <p>字符串内部的单个字符无法改变和增删</p>
+            <p>var s = 'hello';
+
+                delete s[0];
+                s // "hello"
+
+                s[1] = 'a';
+                s // "hello"
+
+                s[5] = '!';
+                s // "hello"
+            </p>
+        </li>
+        <li>
+            <h3>length 属性</h3>
+            <p>length属性返回字符串的长度</p>
+            <p>var s = 'hello';
+                s.length // 5
+
+                s.length = 3;
+                s.length // 5
+
+                s.length = 7;
+                s.length // 5</p>
+            <p>length属性返回字符串的长度，该属性也是无法改变的。
+
+            </p>
+        </li>
+        <li>
+            <h3>字符集</h3>
+            <p>JavaScript 使用 Unicode 字符集。JavaScript 引擎内部，所有字符都用 Unicode 表示。</p>
+            <p>JavaScript 不仅以 Unicode 储存字符，还允许直接在程序中使用 Unicode 码点表示字符，即将字符写成\uxxxx的形式，其中xxxx代表该字符的 Unicode
+                码点。比如，\u00A9代表版权符号。</p>
+            <p>var s = '\u00A9';
+                s // "©"</p>
+            <p>每个字符在 JavaScript 内部都是以16位（即2个字节）的 UTF-16 格式储存。也就是说，JavaScript 的单位字符长度固定为16位长度，即2个字节。</p>
+        </li>
+    </ol>
+</body>
+
+</html>

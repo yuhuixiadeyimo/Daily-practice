@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JavaScript——数值</title>
+    <style>
+        body {
+            background: url(body-bj.png);
+            color: aliceblue;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="text-align:center;">JavaScript——数值</h1>
+    <ol>
+        <li>
+            <h3>整数和浮点数</h3>
+            <p>JacaScript内部，所有的数都是64位浮点数，当某些运算只有整数才能完成，64位小数会自动转换为32位整数，再进行运算</p>
+            <p>由于浮点数不是精确地值，所以在进行运算时要特别小心</p>
+            <p>0.1 + 0.2 === 0.3</p>
+            // false
+            <p> 0.3 / 0.1</p>
+            // 2.9999999999999996
+            <p> (0.3 - 0.2) === (0.2 - 0.1)</p>
+            // false
+        </li>
+        <li>
+            <h3>数值精度</h3>
+            <p>每个数都是64位小数，第一位是0或者1，用来表示正负，0为正，1为负</p>
+            <p>第一位是符号位</p>
+            <p>第二位到第十二位是指数部分（共11位）</p>
+            <p>第十三位到第六十三位是小数部分（共52位）</p>
+        </li>
+        <li>
+            <h3>数值范围</h3>
+            <p>JavaScrip能够表示的数的范围是2的负1024次方到2的正1024次方（开区间）超出这个范围则不会显示</p>
+            <p> Math.pow(2, 1024) // Infinity </p>
+            <p>Math.pow(2, -1075) // 0</p>
+
+        </li>
+        <li>
+            <h3>数值的表示法</h3>
+            <p>当以下两种情况时，JavaScript会自动转化为科学计数法</p>
+            <ol>
+                <li>
+                    <h4>小数点前的数字多余21个</h4>
+                    <p>1234567890123456789012</p>// 1.2345678901234568e+21
+                    <p>123456789012345678901</p>// 123456789012345680000
+                </li>
+                <li>
+                    <h4>小数点后大于五个零</h4>
+                    <p>0.0000003 // 3e-7</p>
+                    // 否则，就保持原来的字面形式
+                    <p> 0.000003 // 0.000003</p>
+                </li>
+            </ol>
+        </li>
+        <li>
+            <h3>数值的进制</h3>
+            <p>十进制：我们平时正常用的数字</p>
+            <p>二进制：前缀0b或0B </p>
+            <p>八进制：前缀0O或0o 或者只用了前导O，且只用了0~7的八个阿拉伯数字</p>
+            <p>十六进制：前缀0x或0X</p>
+        </li>
+        <li>
+            <h3>特殊数值</h3>
+            <ol>
+                <li>
+                    <h4>正零和负零</h4>
+                    <p>除了正零和负零做分母的时候值不同，其他时候正零和负零是一样的</p>
+                    <p> (1 / +0) === (1 / -0) // false</p>
+                    <p>是因为除以正零得到+Infinity，除以负零得到-Infinity，这两者是不相等的</p>
+                </li>
+                <li>
+                    <h4>NaN <b style="color:greenyellow">数据类型依然属于Number</b></h4>
+                    <p>"非数字"——5 - 'x' // NaN</p>
+                    <p>0除以0也会得到NaN</p>
+                    <i>NaN不等于任何值，包括它本身。</i>
+                    <p>NaN === NaN // false</p>
+                    <p>NaN在布尔值中是false</p>
+                    <p>NaN在与任何数（包括他自己）运算时都显示的是NaN</p>
+
+                </li>
+                <li>
+                    <h3>infinity</h3>
+                    <p>Infinity与null计算时，null会转成0，等同于与0的计算。</p>
+                    <p>Infinity与undefined计算，返回的都是NaN。</p>
+                </li>
+            </ol>
+
+
+
+        </li>
+        <li>
+            <h3>与数值相关的全局方法</h3>
+            <ol>
+                <li>
+                    <h4>parselnt()</h4>
+                    <p>parseint用于将字符串转化为整数</p>
+
+                    <p>如果parseInt的参数不是字符串，则先转为字符串，再将字符串转换为整数</p>
+                    parseInt(1.23) // 1——
+                    // 等同于——
+                    parseInt('1.23') // 1
+                    <p>字符串转为整数的时候，是一个个字符依次转换，如果遇到不能转为数字的字符，就不再进行下去，返回已经转好的部分。</p>
+                    parseInt('8a') // 8&nbsp;&nbsp;
+                    parseInt('12**') // 12&nbsp;&nbsp;
+                    parseInt('12.34') // 12&nbsp;&nbsp;
+                    parseInt('15e2') // 15&nbsp;&nbsp;
+                    parseInt('15px') // 15
+                    <p>如果字符串的第一个字符不能转化为数字（后面跟着数字的正负号除外），返回NaN</p>
+                    parseInt('abc') // NaN&nbsp;&nbsp;
+                    parseInt('.3') // NaN&nbsp;&nbsp;
+                    parseInt('') // NaN&nbsp;&nbsp;
+                    parseInt('+') // NaN&nbsp;&nbsp;
+                    parseInt('+1') // 1
+                    <h3>所以，parseInt的返回值只有两种可能，要么是一个十进制整数，要么是NaN。</h3>
+                    <h3>进制转换</h3>
+                    <p>parseInt方法还可以接受第二个参数（2到36之间）这个整数只有在2到36之间，才能得到有意义的结果，超出这个范围，则返回NaN。如果第二个参数是0、undefined和null，则直接忽略。</p>
+                    <p>parseInt('1000') // 1000&nbsp;&nbsp;&nbsp;&nbsp;
+                        // 等同于
+                        parseInt('1000', 10) // 1000
+                    </p>
+                    <p>parseInt('1000', 2) // 8&nbsp;&nbsp;
+                        parseInt('1000', 6) // 216&nbsp;&nbsp;
+                        parseInt('1000', 8) // 512
+                    </p>
+                    <p>如果字符串包含对于指定进制无意义的字符，则从最高位开始，只返回可以转换的数值。如果最高位无法转换，则直接返回NaN。
+
+                        parseInt('1546', 2) // 1
+                        parseInt('546', 2) // NaN
+                    </p>
+                </li>
+                <li>
+                    <h3>parseFloat()</h3>
+                    <p>将字符串转化为浮点数</p>
+                    <p> parseFloat('3.14') // 3.14</p>
+                    <p> parseFloat('314e-2') // 3.14</p>
+                    <p> parseFloat('0.0314E+2') // 3.14</p>
+                    <p>如果字符串包含不能转为浮点数的字符，则不再进行往后转换，返回已经转好的部分。</p>
+                    <p>parseFloat('3.14more non-digit characters') // 3.14</p>
+                    <p>parseFloat('\t\v\r12.34\n ') // 12.34</p>
+                    <p>如果参数不是字符串，或者字符串的第一个字符不能转化为浮点数，则返回NaN。</p>
+                </li>
+                <li>
+                    <h3>isNaN()</h3>
+                    <p>判断一个数是否为NaN</p>
+                    <p>isNaN(NaN) // true
+                        isNaN(123) // false
+                    </p>
+
+                </li>
+                <li>
+                    <h3>isFinite</h3>
+                    <p>isFinite返回一个布尔值，表示一个值是否为正常的数值</p>
+                    <p>isFinite(Infinity) // false
+                        isFinite(-Infinity) // false
+                        isFinite(NaN) // false
+                        isFinite(undefined) // false
+                        isFinite(null) // true
+                        isFinite(-1) // true</p>
+                </li>
+            </ol>
+        </li>
+
+    </ol>
+</body>
+
+</html>
