@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="myico.ico" type="image/x-icon">
+    <title>JavaScript_函数</title>
+    <style>
+        body {
+            background: url(body-bj.png);
+            color: aliceblue;
+        }
+
+        h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>JavaScript——函数</h1>
+    <ol>
+        <li>
+            <h2>函数的声明</h2>
+            <p>JavaScript 有三种声明函数的方法。</p>
+            <ol>
+                <li>
+                    <h3>function 命令</h3>
+                    <p>function命令声明的代码区块，就是一个函数。function命令后面是函数名，函数名后面是一对圆括号，里面是传入函数的参数。函数体放在大括号里面。s</p>
+                    <p>function print(s) {
+                        console.log(s);
+                        }</p>
+                </li>
+                <li>
+                    <h3>函数表达式</h3>
+                    <p>var print = function(s) {
+                        console.log(s);
+                        };</p>
+                    <p>function命令后面不带有函数名。如果加上函数名，该函数名只在函数体内部有效，在函数体外部无效。</p>
+                </li>
+                <li>
+                    <h3>Function 构造函数</h3>
+                    <p>var add = new Function(
+                        'x',
+                        'y',
+                        'return x + y'
+                        );</p>
+                    <p>这种声明函数的方式非常不直观，几乎无人使用。</p>
+                </li>
+            </ol>
+        </li>
+        <li>
+            <h3> 函数的重复声明</h3>
+            <p> 如果同一个函数被多次声明，后面的声明就会覆盖前面的声明。</p>
+        </li>
+        <li>
+            <p>函数可以调用自身，这就是递归</p>
+            <p>调用函数时，要使用圆括号运算符.圆括号之中，可以加入函数的参数</p>
+            <p>function add(x, y) {
+                return x + y;
+                }
+
+                add(1, 1) // 2
+            </p>
+        </li>
+        <li>
+            <h3>函数的属性和方法</h3>
+            <p>函数的name属性返回函数的名字</p>
+            <p>function f1() {}
+                f1.name // "f1"</p>
+        </li>
+        <li>
+            <h3>length 属性</h3>
+            <p>函数定义之中的参数个数</p>
+            <p>function f(a, b) {}
+                f.length // 2</p>
+        </li>
+        <li>
+            <h3>toString()</h3>
+            <p>函数的toString方法返回一个字符串，内容是函数的源码</p>
+            <p>
+                function f() {
+                a();
+                b();
+                c();
+                }
+
+                f.toString()
+                // function f() {
+                // a();
+                // b();
+                // c();
+                // }
+            </p>
+
+        </li>
+        <li>
+            <h3>函数作用域</h3>
+            <p>对于var命令来说，局部变量只能在函数内部声明，在其他区块中声明，一律都是全局变量。</p>
+            <p>变量v在函数内部定义，所以是一个局部变量，函数之外就无法读取。
+
+                函数内部定义的变量，会在该作用域内覆盖同名全局变量。</p>
+        </li>
+        <li>
+            <h3>
+                函数内部的变量提升
+            </h3>
+            <p>var命令声明的变量，不管在什么位置，变量声明都会被提升到函数体的头部。</p>
+        </li>
+    </ol>
+</body>
+
+</html>
