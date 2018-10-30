@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // //冒泡排序
+        // var arr = [10, 21, 11, 245, 12, 44, 33];
+        // //length-1轮比较
+        // for (y = 0; y < arr.length - 1; y++) {
+        //     //一轮的比较
+        //     for (i = 0; i < arr.length - 1; i++) {
+        //         if (arr[i] > arr[i + 1]) {
+        //             var temp = arr[i];
+        //             arr[i] = arr[i + 1];
+        //             arr[i + 1] = temp;
+
+        //         }   
+
+        //     }
+
+        // }
+        // console.log(arr)
+
+        //函数练习
+
+        // function getNum(num1, num2) {
+        //     return num1 > num2 ? num1 : num2;
+        // }
+        // console.log(getNum);
+
+        // function isPrimeNumber(num) {
+        //     for (var i = 2; i < num; i++) {
+        //         if (num % i == 0) {
+        //             return false;
+        //         }
+        //     }
+        //     return true;
+        // }
+        // console.log(isPrimeNumber(23) ? "是质数" : "不是质数")
+
+        // 一组数字中的最小值，最大值
+
+        function getMax(array) {
+            var max = array[0];
+            for (var i = 0; i < array.length; i++) {
+                if (max < array[i]) {
+                    max = array[i]
+                }
+            }
+            return max
+        }
+        // var max = getMax([10, 20, 50, 12])
+        // console.log(max) 
+        console.log(getMax([10, 5, 84, 54, 22]))
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

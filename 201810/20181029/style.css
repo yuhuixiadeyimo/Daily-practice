@@ -1,0 +1,21 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.db {
+    height: 15px;
+    background-color: #81002d;
+}
+
+map {
+    display: inline;
+}
+
+.db img {
+    display: block;
+    /* width: 750px; */
+    /* height: 93px; */
+    margin: 0 auto;
+
+}
