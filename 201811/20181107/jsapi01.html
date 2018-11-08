@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 1.点击按钮修改a标签的链接和热点文字 -->
+    <!-- <input type="button" value="点击我" id="btn">
+    <a href="http://www.baidu.com" id="ak">这是百度</a>
+    <script>
+        // document.getElementById("btn").onclick = function () {
+        //     document.getElementById("ak").href = "http://www.google.com";
+        //     document.getElementById("ak").innerText = "这是谷歌"  };
+
+        //简化后写法为
+        document.getElementById("btn").onclick = function () {
+            var aobj = document.getElementById("ak");
+            aobj.href = "http://www.bilibili.com";
+            aobj.innerText = "这是哔哩哔哩"
+        };
+    </script> -->
+
+    <!-- 2.点击按钮设置多个P标签的文字内容 -->
+    <!-- <input type="button" value="点击按钮" id="btn">
+    <div id="div1">
+        <p>这是一个P标签</p>
+        <p>这是一个P标签</p>
+        <p>这是一个P标签</p>
+        <p>这是一个P标签</p>
+    </div>
+    <div id="div2">
+        <p>这是一个P标签</p>
+        <p>这是一个P标签</p>
+        <p>这是一个P标签</p>
+        <p>这是一个P标签</p>
+    </div>
+    <script>
+
+        document.getElementById("btn").onclick = function () {
+            var pobj = document.getElementById("div2").getElementsByTagName("p");
+            //因为返回的是维数组，所以要遍历数组
+            for (var i = 0; i <= pobj.length; i++) {
+                pobj[i].innerText = "这些都是P标签"
+            }
+        }
+    </script> -->
+
+    <!-- 点击按钮修改图片的alt属性和title属性 -->
+    <!-- <input type="button" value="显示效果" id="btn">
+    <img src="bg-2.jpg" alt="背景" title="这是背景图片">
+    <script>
+        document.getElementById("btn").onclick = function () {
+            var iobj = document.getElementsByTagName("img");
+            iobj[0].alt = "就是个背景图片";
+            iobj[0].title = "没错，就是背景图片"
+            iobj[0].src = "https://static.52pojie.cn/static/image/common/10logo.png"
+        }
+    </script> -->
+
+    <!-- 点击按钮修改多个文本框的值 -->
+    <!-- <input type="button" value="显示效果" id="btn"><br>
+    <input type="text">请输入<br>
+    <input type="text">请输入<br>
+    <input type="text">请输入<br>
+    <input type="text">请输入<br>
+    <input type="text">请输入<br>
+    <input type="text">请输入<br>
+    <script>
+        document.getElementById("btn").onclick = function () {
+            var inputs = document.getElementsByTagName("input");
+            for (var i = 0; i < inputs.length; i++) {
+                if (inputs[i].type != "button") {
+                    inputs[i].value = "你想让我输入什么"
+                }
+            }
+        }
+    </script> -->
+
+
+    <!-- 点击每个图片弹出对话框 -->
+    <!-- <input type="button" value="显示效果" id="btn"> -->
+    <!-- <img src="bg-2.jpg" alt="" id="img1">
+    <img src="bg-2.jpg" alt="" id="img2">
+    <img src="bg-2.jpg" alt="" id="img3"> -->
+    <!-- <script>
+        document.getElementById("img1").onclick = function () {
+            alert("第1次点击")
+        };
+        document.getElementById("img2").onclick = function () {
+            alert("第2次点击")
+        };
+        document.getElementById("img3").onclick = function () {
+            alert("第3次点击")
+        }
+
+        var imobj = document.getElementsByTagName("img");
+        for (var i = 0; i < imobj.length; i++) {
+            imobj[i].onclick = function () {
+                alert("被点击了");
+            }
+        }
+    </script> -->
+
+
+    <!-- 点击图片修改自身的宽高 -->
+    <!-- <img src="bg-2.jpg" alt="" id="img1">
+    <script>
+        var imgobj = document.getElementById("img1");
+        imgobj.onclick = function () {
+            this.width = "200";
+            this.height = "200"
+        }
+    </script> -->
+
+    <!-- 按钮排他功能 -->
+    <!-- <input type="button" value="猜猜我是谁" id="btn">
+    <input type="button" value="猜猜我是谁" id="btn">
+    <input type="button" value="猜猜我是谁" id="btn">
+    <input type="button" value="猜猜我是谁" id="btn">
+    <input type="button" value="猜猜我是谁" id="btn">
+    <input type="button" value="猜猜我是谁" id="btn">
+    <script>
+        //获取所有的按钮，分别注册点击事件
+        var btobj = document.getElementsByTagName("input");
+        //循环遍历所有的按钮
+        for (var i = 0; i < btobj.length; i++) {
+            //为每个按钮注册点击事件
+            btobj[i].onclick = function () {
+                //把所有的按钮的value设置为：猜猜我是谁
+                for (var j = 0; j < btobj.length; j++) {
+                    btobj[j].value = "猜猜我是谁";
+                }
+                //当前被点击的按钮设置为：WHO AM I;
+                this.value = "WHO AM I";
+            }
+        }
+    </script> -->
+
+
+
+</body>
+
+</html>
