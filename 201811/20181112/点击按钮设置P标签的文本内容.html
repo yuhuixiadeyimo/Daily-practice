@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <p id="pid">香蕉菠萝</p>
+    <input type="button" name="" id="btn" value="我想吃苹果">
+    <script>
+        var btobj = document.getElementById("btn");
+        btobj.onclick = function () {
+            var pobj = document.getElementById("pid");
+            pobj.innerText = "苹果"
+        }
+    </script> -->
+
+    <p id="pid">我不喜欢打游戏</p>
+    <input type="button" value="你确定？" id="btn">
+    <script>
+        document.getElementById("btn").onclick = function () {
+            document.getElementById("pid").innerText = "我喜欢";
+        }
+    </script>
+</body>
+
+</html>

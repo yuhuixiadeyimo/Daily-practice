@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- <input type="button" value="显示效果" id="btn"> -->
+    <!-- <img src="bg-2.jpg" alt="" id="im2">
+    <script>
+        // document.getElementById("im2").onclick = function () {
+        //     this.width = "400"
+        //     this.height = "300"
+        // }
+        var obj2 = document.getElementById("im2")
+        obj2.onclick = function () {
+            obj2.width = "400"
+            obj2.height = "300"
+        }
+    </script> -->
+    <!-- 
+    <input type="button" value="显示图片" id="btn">
+    <img src="" alt="" id="im3">
+    <script>
+        document.getElementById("btn").onclick = function () {
+            document.getElementById("im3").src = "bg-2.jpg";
+            document.getElementById("im3").onclick = function () {
+
+                document.getElementById("im3").width = "400";
+                document.getElementById("im3").height = "300"
+            }
+        }
+    </script> -->
+    <!-- <input type="button" value="显示效果" id="btn">
+    <img src="" id="im4" alt="" title="">
+    <script>
+        document.getElementById("btn").onclick = function () {
+            document.getElementById("im4").src = "bg-2.jpg";
+            document.getElementById("im4").title = "点击图片变小"
+            document.getElementById("im4").onclick = function () {
+                document.getElementById("im4").width = "500";
+                document.getElementById("im4").height = "400"
+            }
+        }
+    </script> -->
+    <input type="button" value="显示图片" id="btn">
+    <img src="" alt="" id="im5" title="">
+
+    <script>
+        var btnobj = document.getElementById("btn");
+        btnobj.onclick = function () {
+            var imobj = document.getElementById("im5");
+            imobj.src = "bg-2.jpg";
+            imobj.title = "点击图片变小";
+            imobj.onclick = function () {
+                this.width = "600";
+                this.height = "500"
+            }
+        }
+    </script>
+</body>
+
+</html>
