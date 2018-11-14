@@ -20,10 +20,13 @@
 
 
     <input id="btn" type="button" value="切换谷歌">
-    <a href="http://www.baidu.com">baidu</a>
+    <a href="http://www.baidu.com" id="aid">baidu</a>
     <script>
-        
-        </script>
+        document.getElementById("btn").onclick = function () {
+            document.getElementById("aid").href = "http://www.google.com";
+            document.getElementById("aid").innerText = "google"
+        }
+    </script>
 </body>
 
 </html>

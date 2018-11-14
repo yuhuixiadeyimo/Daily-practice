@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="btn">隔行变色</button>
+    <ul id="sb">
+        <li>傻逼范家顺</li>
+        <li>傻逼范家顺</li>
+        <li>傻逼范家顺</li>
+        <li>傻逼范家顺</li>
+        <li>傻逼范家顺</li>
+        <li>傻逼范家顺</li>
+    </ul>
+    <script>
+        document.getElementById("btn").onclick = function () {
+            var list = document.getElementById("sb").getElementsByTagName("li");
+            for (var i = 0; i < list.length; i++) {
+                // if (i % 2 == 0) {
+                //     //奇数
+                //     list[i].style.backgroundColor = "green"
+                // } else {
+                //     //偶数
+                //     list[i].style.backgroundColor = "red"
+                // }
+                list[i].style.backgroundColor = i % 2 == 0 ? "green" : "red";
+            }
+        }
+    </script>
+</body>
+
+</html>

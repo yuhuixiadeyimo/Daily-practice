@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" value="请输入密码" id="yey">
+    <script>
+        document.getElementById("yey").onblur = function () {
+            if (this.value.length >= 6 && this.value.length <= 10) {
+                this.style.backgroundColor = "green"
+            } else {
+                this.style.backgroundColor = "gray"
+            }
+        }
+    </script>
+</body>
+
+</html>

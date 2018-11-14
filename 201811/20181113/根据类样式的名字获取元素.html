@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <p>我是傻逼范家顺</p>
+    <p class="cls">我是傻逼范家顺</p>
+    <p class="cls">我是傻逼范家顺</p>
+    <span class="cls">我是傻逼范家顺</span><br>
+    <span>我是傻逼范家顺</span><br>
+    <span class="cls">我是傻逼范家顺</span><br>
+    <button id="btn"> 显示</button>
+    <script>
+        document.getElementById("btn").onclick = function () {
+            var sbobj = document.getElementsByClassName("cls");
+            for (var i = 0; i < sbobj.length; i++) {
+                sbobj[i].innerText = "就是就是";
+                sbobj[i].style.color = "green"
+            }
+
+        }
+    </script>
+</body>
+
+</html>

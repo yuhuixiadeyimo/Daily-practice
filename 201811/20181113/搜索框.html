@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <input type="text" value="请输入内容" id="btn">
+    <script>
+        document.getElementById("btn").onfocus = function () {
+            //注册焦点事件
+            if (this.value == "请输入内容") {
+                this.value = ""
+            }
+        }
+        //失去焦点事件
+        document.getElementById("btn").onblur = function () {
+            if (this.value == "") {
+                this.value = "请输入内容"
+
+            }
+        }
+    </script> -->
+    <!-- 移除自定义属性和类样式属性 -->
+    <input type="button" value="显示效果" id="btn">
+    <div id="dv" class="cls" score="10"></div>
+    <script>
+        document.getElementById("btn").onclick = function () {
+            // document.getElementById("dv").className = "";
+            document.getElementById("dv").removeAttribute("score");
+            document.getElementById("dv").removeAttribute("class")
+        }
+    </script>
+</body>
+
+</html>

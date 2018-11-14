@@ -1,28 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
-</head>
+  </head>
 
-<body>
-    <button id="btn">修改内容</button>
-    <p>王者</p>
-    <p>王者</p>
-    <p>王者</p>
-    <p>王者</p>
-    <p>王者</p>
+  <body>
+    <!--
+      <button id="btn">修改内容</button>
+      <p>王者</p>
+      <p>王者</p>
+      <p>王者</p>
+      <p>王者</p>
+      <p>王者</p>
+      <script>
+          document.getElementById("btn").onclick = function () {
+              var objo = document.getElementsByTagName("p");
+              for (var i = 0; i < objo.length; i++) {
+                  objo[i].innerText = "农药"
+              }
+          }
+      </script>
+    -->
+
+    <input type="button" value="变" id="btn" />
+    <p>我要上王者</p>
+    <p>我要上王者</p>
+    <p>我要上王者</p>
+    <p>我要上王者</p>
+    <p>我要上王者</p>
+    <p>我要上王者</p>
     <script>
-        document.getElementById("btn").onclick = function () {
-            var objo = document.getElementsByTagName("p");
-            for (var i = 0; i < objo.length; i++) {
-                objo[i].innerText = "农药"
-            }
+      document.getElementById("btn").onclick = function() {
+        var pobj = document.getElementsByTagName("p");
+        for (var i = 0; i < pobj.length; i++) {
+          pobj[i].innerText = "上个鸡毛";
         }
+      };
     </script>
-</body>
-
+  </body>
 </html>
