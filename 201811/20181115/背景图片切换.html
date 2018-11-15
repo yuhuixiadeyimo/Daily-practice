@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: url("http://old.bz55.com/uploads/allimg/151222/139-151222110245.jpg")no-repeat;
+        }
+
+        #im {
+            width: 700px;
+            height: 200px;
+            margin: auto;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+
+        }
+
+        img {
+            width: 220px;
+            height: 150px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="im">
+        <img src="http://old.bz55.com/uploads/allimg/151222/139-151222110245.jpg" alt="">
+        <img src="https://attach.bbs.miui.com/forum/201311/17/151252iz9tvh9ttkl5fu4e.jpg" alt="">
+        <img src="http://pic.xeeok.com/uploads/20171231/201712311635021100/292705_001.jpg" alt="">
+        <script>
+            //定义一个对象获取其中的所有元素标签img
+            var imobj = document.getElementById("im").children;
+            //循环遍历img,给每一个img注册点击事件
+            for (var i = 0; i < imobj.length; i++) {
+                imobj[i].onclick = function () {
+                    //body背景图片的url路径变成被点击的img
+                    document.body.style.backgroundImage = " url(" + this.src + ")";
+                }
+            }
+        </script>
+    </div>
+
+</body>
+
+</html>

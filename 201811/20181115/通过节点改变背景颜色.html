@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div{
+            width: 400px;
+            height: 350px;
+            border: 1px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="button" value="变色吧" id="btn">
+    <div id="dv">
+        <span>1</span>
+        <p>55</p>
+        <span>2</span>
+        <p>55</p>
+        <span>3</span>
+        <p>55</p>
+        <span>4</span>
+        <a href="http://www.baidu.com">百度</a>
+    </div>
+    <script>
+        //定义一个对象
+        var divobj = document.getElementById("btn");
+        //给按钮btn一个点击事件
+        divobj.onclick = function () {
+            //定义对象dv
+            var dv = document.getElementById("dv");
+            //获取div里所有的子节点，定义对象nodes
+            var nodes = dv.childNodes;
+            //循环遍历所有子节点，
+            for (var i = 0; i < nodes.length; i++) {
+                //选出所有自节点中p节点
+                if (nodes[i].nodeType == 1 && nodes[i].nodeName == "P") {
+                    //设置所有P节点的背景颜色
+                    nodes[i].style.backgroundColor = "red"
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
