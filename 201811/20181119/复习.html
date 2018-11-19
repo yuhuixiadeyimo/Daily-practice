@@ -6,6 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <!-- 背景图片切换 -->
+    <!-- <style>
+        body {
+            background-image: url(http://p18.qhimg.com/bdr/__85/d/_open360/meinv130/ABC26cbd.jpg)
+        }
+
+        div {
+            margin: 100px auto 0;
+            width: 700px;
+            height: 170px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        img {
+            width: 200px;
+            height: 150px;
+            cursor: pointer;
+            border: none;
+        }
+    </style> -->
+
+
+    <!-- table切换 -->
     <style>
         .box {
 
@@ -49,6 +74,31 @@
 </head>
 
 <body>
+
+    <!-- 背景图片切换 -->
+    <!-- <div id="dv">
+        <img src="http://p18.qhimg.com/bdr/__85/d/_open360/meinv130/ABC26cbd.jpg" alt="">
+        <img src="http://p16.qhimg.com/bdr/__85/d/_open360/fengjing34/ABC8cbd.jpg" alt="">
+        <img src="http://img15.3lian.com/2015/f1/18/d/89.jpg" alt="">
+    </div> -->
+    <!-- <script>
+        var imobj = document.getElementById("dv").getElementsByTagName("img");
+        for (var i = 0; i < imobj.length; i++) {
+            imobj[i].onclick = function () {
+                document.body.style.backgroundImage = "url(" + this.src + ")"
+            }
+        }
+    </script> -->
+    <!-- <script>
+        var obji = document.getElementById("dv").getElementsByTagName("img");
+        for (var i = 0; i < obji.length; i++) {
+            obji[i].onclick = function () {
+                document.body.style.backgroundImage = "url(" + this.src + ")"
+            }
+        }
+    </script> -->
+
+    <!-- table切换 -->
     <div class="box" id="box">
         <div class="hd">
             <span class="cls">英雄联盟</span>
@@ -68,40 +118,20 @@
     </div>
 
     <script>
-        //获取最外层div 
         var boxobj = document.getElementById("box");
-        //获取第一个div
         var hdobj = boxobj.getElementsByTagName("div")[0];
-        //获取第二个div
         var bdobj = boxobj.getElementsByTagName("div")[1];
-
-        //获取第二个div里面所有的li标签 
-        var list = bdobj.getElementsByTagName("li");
-
-        //获取第一个div中所有的span标签
-        var spans = hdobj.getElementsByTagName("span");
-        //所有的span点击事件
+        // var bdobj = document.getElementById("bd");
+        var spans = hdobj.children;
+        var lists = bdobj.children;
         for (var i = 0; i < spans.length; i++) {
-            //在点击每个span标签之前获取索引值
-            spans[i].setAttribute("index", i)
             spans[i].onclick = function () {
-                //先隐藏所有的cls
                 for (var j = 0; j < spans.length; j++) {
-                    spans[j].removeAttribute("class");
-                }
-                //点击哪个显示哪个cls
-                this.className = "cls";
+                    spans[j].removeAttribute("class")
 
-                //得到当前点击时的索引值
-                var num = this.getAttribute("index");
-                for (var k = 0; k < list.length; k++) {
-                    //先隐藏所有的
-                    list[k].removeAttribute("class")
                 }
-                //点击当前的显示cls
-                list[num].className = "cls"
+                this.className = "cls"
             }
-
         }
     </script>
 </body>

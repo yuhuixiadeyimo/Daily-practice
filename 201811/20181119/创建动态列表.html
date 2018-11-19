@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div{
+            width: 300px;
+            height: 250px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="button" value="显示效果" id="btn">
+    <p></p>
+    <div id="dv">
+
+    </div>
+    <script>
+        // document.getElementById("btn").onclick = function () {
+        //     document.getElementById("dv").innerHTML = ""
+        // }
+        // //定义对象names
+        // var names = ["鸣人", "佐助", "我爱罗", "卡卡西", "自来也", "大蛇丸"];
+        // //给按钮一个点击事件
+        // document.getElementById("btn").onclick = function () {
+        //     //定义一个对象str
+        //     var str = "<ul>";
+        //     //根据循环创立对应的li
+        //     for (var i = 0; i < names.length; i++) {
+        //         str += "<li>" + names[i] + "</li>";
+        //     }
+        //     //str就为一对ul
+        //     str += "</ul>";
+
+
+        //     document.getElementById("dv").innerHTML = str;
+        // }
+
+        var names = ["鸣人", "佐助", "我爱罗", "卡卡西", "自来也", "大蛇丸"];
+        document.getElementById("btn").onclick = function () {
+            var str = "<ul style='list-style-type:none;cursor:pointer'>"
+            for (var i = 0; i < names.length; i++) {
+                str += "<li>" + names[i] + "</li>"
+            }
+            str += "</ul>"
+
+            document.getElementById("dv").innerHTML = str
+
+            //获取id="dv"中的所有li标签，并把它们定义为list的对象
+            var list = document.getElementById("dv").getElementsByTagName("li")
+            //循环遍历所有的li标签
+            for (var j = 0; j < list.length; j++) {
+                //鼠标进入事件
+                list[j].onmouseover = function () {
+                    //当前鼠标进入位置颜色
+
+                    this.style.color = "red"
+                }
+                //鼠标离开事件
+                list[j].onmouseout = function () {
+                    //当前鼠标离开位置颜色
+                    this.style.color = ""
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

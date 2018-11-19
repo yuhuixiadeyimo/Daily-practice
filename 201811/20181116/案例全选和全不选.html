@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        table{
+            border-collapse: collapse;
+            border-spacing: 0;
+            margin: 100px auto 0;
+        }
+        .cls{
+            background-color:#09c ;
+            color: #fff;
+            font: 16px "微软雅黑"; 
+        }
+    </style>
+</head>
+
+<body>
+    <table border="1">
+
+        <thead>
+            <tr class="cls">
+                <td><input type="checkbox" id="j_cbAll"></td>
+                <td>菜名</td>
+                <td>饭店</td>
+            </tr>
+        </thead>
+        <tbody id="j_tb">
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>西红柿炒蛋</td>
+                <td>和平饭店</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>辣子鸡</td>
+                <td>大众饭店</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>臭豆腐</td>
+                <td>弗兰长沙</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>小笼包</td>
+                <td>上海海洋大学</td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        //先获取全选的复选框,定义对象ckAll
+        var ckAll = document.getElementById("j_cbAll");
+        var cka = document.getElementById("j_tb");
+        //获取tbody中所有的小复选框 ,定义对象为ck$
+        var cks = cka.getElementsByTagName("input");
+
+
+        //当点击全选时，选中所有子复选框
+        //给主复选框一个点击事件,当点击主复选框时，获取所有的子复选框
+        ckAll.onclick = function () {
+            //遍历tbody中的所有子复选框
+            for (var i = 0; i < cks.length; i++) {
+                cks[i].checked = this.checked
+            }
+        }
+
+
+        //当选中所有子复选框时，主复选框自动被选中
+        //获取tbody中所有的子复选框
+        for (var k = 0; k < cks.length; k++) {
+            // 分别注册点击事件
+            cks[k].onclick = function () {
+                //假定所有的子复选框都被选中了
+                var flag = true
+                //判断是否所有的复选框都被选中了
+                for (var j = 0; j < cks.length; j++) {
+                    //判断子复选框是否被选中
+                    if (!cks[j].checked) {
+                        //有一个复选框没选中就进这里
+                        flag = false;
+                        break;
+                    }
+                }
+                //此时全选的复选框的状态就是flag这个变量的值
+                ckAll.checked = flag;
+            }
+        }
+    </script>
+</body>
+
+</html>
