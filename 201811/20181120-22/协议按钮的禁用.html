@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <textarea name="texta" id="" cols="30" rows="10">
+    请仔细阅读本协议，并别在十分钟内不允许干别的事情，否则注册失败，后果自负.
+    </textarea>
+    <input type="button" value="协议剩余时间(5)" id="btn" disabled="">
+    <script>
+        var time = 5;
+        var timd = setInterval(function () {
+            document.getElementById("btn").value = "协议剩余时间(" + time + ")"
+            time--;
+            if (time <= 0) {
+                //小于等于0的时候停止计时器
+                clearInterval(timd)
+                //按钮变成可按的同意
+                document.getElementById("btn").disabled = "";
+                document.getElementById("btn").value = "同意";
+            }
+        }, 1000)
+    </script>
+</body>
+
+</html>

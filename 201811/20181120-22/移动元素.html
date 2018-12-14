@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #dv{
+            width: 200px;
+            height: 100px;
+            background-color: black;
+            margin-top: 20px;
+            /* div要脱离文档流，所以要用 */position: absolute;
+            left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <input type="button" value="移动400px" id="btn1">
+    <input type="button" value="移动800px" id=" btn2">
+    <div id="dv"></div>
+
+    <script>
+        function my$(id) {
+            return document.getElementById(id)
+        }
+        //移动400px;
+        //点击按钮1
+        my$("btn1").onclick = function () {
+            //设置计时器
+            var temp = setInterval(function () {
+
+                //获取DIV的当前位置
+                var current = document.getElementById("dv").offsetLeft;
+                //每次移动的距离
+                var step = 10;
+                //每次移动后的距离
+                current += step;
+                //判断当前移动的位置是否到达目标
+                if (current <= 400) {
+                    //获取DIV的目标位置
+                    document.getElementById("dv").style.left = current + "px"
+                } else {
+                    //清理定时器
+                    clearInterval(temp)
+                }
+            }, 20)
+        }
+
+
+
+        //移动800px;
+        //点击按钮2
+        my$("btn2").onclick = function () {
+            //设置计时器
+            var temp = setInterval(function () {
+
+                //获取DIV的当前位置
+                var current = document.getElementById("dv").offsetLeft;
+                //每次移动的距离
+                var step = 10;
+                //每次移动后的距离
+                current += step;
+                //判断当前移动的位置是否到达目标
+                if (current <= 800) {
+                    //获取DIV的目标位置
+                    document.getElementById("dv").style.left = current + "px"
+                } else {
+                    //清理定时器
+                    clearInterval(temp)
+                }
+            }, 20)
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        img {
+            border: 0;
+        }
+
+        .tb {
+            width: 520px;
+            height: 280px;
+            margin: 100px auto;
+            position: relative;
+        }
+
+        .tb a {
+            width: 24px;
+            height: 36px;
+            display: block;
+            /* background-color: pink; */
+            position: absolute;
+            top: 50%;
+            margin-top: -18px;
+            text-decoration: none;
+            text-align: center;
+            line-height: 36px;
+            font-size: 24px;
+            color: #000;
+        }
+
+        .arr-l {
+            left: 0;
+            background: url(../images/left.png)no-repeat;
+        }
+
+        .arr-r {
+            right: 0;
+            background: url(../images/right.png)no-repeat;
+
+        }
+
+        .tb ul {
+            width: 70px;
+            height: 13px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background: rgba(255, 255, 255, .3);
+            /* background-color: #000; */
+            border-radius: 5px;
+            position: absolute;
+            list-style: none;
+            bottom: 18px;
+            left: 50%;
+            margin-left: -35px;
+        }
+
+        .tb ul li {
+            width: 8px;
+            height: 8px;
+            background-color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+
+        }
+
+        .tb .cursor {
+            background-color: chocolate;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="tb">
+        <img src="../images/tb.jpg" alt="">
+        <a href="#" class="arr-l">
+            <!-- &lt; -->
+        </a>
+        <a href="#" class="arr-r">
+            <!-- &gt; -->
+        </a>
+        <ul>
+            <li class="cursor"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .w {
+            width: 1200px;
+            margin: 0 auto;
+        }
+
+        a {
+            text-decoration: none;
+            color: aliceblue;
+        }
+
+        header {
+            height: 50px;
+            background: url(../images/wx.jpg)repeat-x;
+        }
+
+        header ul {
+            display: flex;
+            list-style: none;
+
+        }
+
+        header ul li {
+            margin: 0 10px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+        }
+
+        header a {
+            height: 33px;
+            line-height: 33px;
+            background: rgb(45, 45, 45) url(../images/to.png)no-repeat;
+            /* border-radius: 15px; */
+            padding-left: 15px;
+            display: inline-block;
+
+        }
+
+        header span {
+            display: inline-block;
+            /* padding: 15px; */
+            /* height: 33px; */
+            padding-right: 15px;
+
+            background: rgb(45, 45, 45) url(../images/to.png)no-repeat right;
+        }
+
+        header a:hover {
+            background: rgb(45, 45, 45) url(../images/ao.png)no-repeat;
+        }
+
+        header a:hover span {
+            background: rgb(45, 45, 45) url(../images/ao.png)no-repeat right;
+
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="w">
+            <ul>
+                <li><a href="#"><span>首页</span></a></li>
+                <li><a href="#"><span>首页页</span></a></li>
+                <li><a href="#"><span>首页首页</span></a></li>
+                <li><a href="#"><span>首页首页首页</span></a></li>
+                <li><a href="#"><span>首页首页首页首页</span></a></li>
+            </ul>
+        </div>
+    </header>
+</body>
+
+</html>

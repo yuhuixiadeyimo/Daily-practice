@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div{
+                width: 600px;
+                height: 700px;
+                background-color: black;
+                border: 1px solid black;
+            position: relative;
+            }
+            span{
+                font-size: 30px;
+                color: aliceblue;
+            position: absolute
+            }
+    </style>
+</head>
+
+<body>
+    <input type="button" value="开始" id="btn1">
+    <input type="button" value="停止" id="btn2">
+    <div id="dv">
+    </div>
+    <script>
+        // var tem = ""
+        document.getElementById("btn1").onclick = function () {
+            setInterval(function () {
+                document.getElementById("dv").innerHTML = "<span>☆</span>"
+                var x = parseInt(Math.random() * 600)
+                var y = parseInt(Math.random() * 600)
+                document.getElementById("dv").firstElementChild.style.left = x + "px"
+                document.getElementById("dv").firstElementChild.style.top = y + "px"
+
+            }, 100)
+        }
+        // document.getElementById("btn2").onclick = function () {
+        //     clearInterval(tem)
+        // }
+    </script>
+</body>
+
+</html>
