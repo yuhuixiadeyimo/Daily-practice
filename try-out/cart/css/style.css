@@ -6,7 +6,7 @@
   right: 100px;
   z-index: 999;
 }
-
+ 
 /* 固定右下角 */
 .more {
   position: fixed;
@@ -507,7 +507,7 @@
 
 /* 第六屏 */
 .screen06 {
-  background: url(../images/06-bg.png)no-repeat left bottom;
+  background: url(../images/06-bg.png)no-repeat -300px bottom;
 }
 
 /* 第七屏 */
